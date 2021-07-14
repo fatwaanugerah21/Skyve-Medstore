@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.skyve.org/xml/document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Supplier" xsi:schemaLocation="http://www.skyve.org/xml/document ../../../schemas/document.xsd">
+    <persistent name="MED_Supplier"/>
+    <singularAlias>Supplier</singularAlias>
+    <pluralAlias>Suppliers</pluralAlias>
+    <iconStyleClass>fa fa-suitcase</iconStyleClass>
+    <bizKey expression="Supplier - {name}"/>
+    <attributes>
+        <text required="true" name="name">
+            <displayName>Name</displayName>
+            <length>50</length>
+        </text>
+    </attributes>
+</document>

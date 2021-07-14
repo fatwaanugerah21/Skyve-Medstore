@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="http://www.skyve.org/xml/module" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="MEDStore" prototype="true" name="MEDStore" xsi:schemaLocation="http://www.skyve.org/xml/module ../../schemas/module.xsd">
+    <homeRef>list</homeRef>
+    <homeDocument>Supplier</homeDocument>
+    <documents>
+        <document ref="Supplier"/>
+        <document ref="Product"/>
+    </documents>
+    <roles>
+        <role name="Viewer">
+            <description><![CDATA[Enough privileges to view MEDStore documents.]]></description>
+            <privileges>
+                <document name="Supplier" permission="_R__C"/>
+                <document name="Product" permission="_R__C"/>
+            </privileges>
+        </role>
+        <role name="Maintainer">
+            <description><![CDATA[Enough privileges to create and edit MEDStore documents.]]></description>
+            <privileges>
+                <document name="Supplier" permission="CRUDC"/>
+                <document name="Product" permission="CRUDC"/>
+            </privileges>
+        </role>
+    </roles>
+    <menu>
+        <list document="Supplier" name="Suppliers">
+            <role name="Maintainer"/>
+            <role name="Viewer"/>
+        </list>
+        <list document="Product" name="Products">
+            <role name="Maintainer"/>
+            <role name="Viewer"/>
+        </list>
+    </menu>
+</module>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.skyve.org/xml/document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Product" xsi:schemaLocation="http://www.skyve.org/xml/document ../../../schemas/document.xsd">
+    <persistent name="MED_Product"/>
+    <singularAlias>Product</singularAlias>
+    <pluralAlias>Products</pluralAlias>
+    <iconStyleClass>fa fa-list-alt</iconStyleClass>
+    <bizKey expression="Product - {quantity}"/>
+    <attributes>
+        <text name="name">
+            <displayName>Name</displayName>
+            <length>50</length>
+        </text>
+        <integer required="true" name="quantity">
+            <displayName>Quantity</displayName>
+        </integer>
+        <association required="true" type="aggregation" name="supplier">
+            <displayName>Supplier</displayName>
+            <documentName>Supplier</documentName>
+        </association>
+    </attributes>
+</document>
